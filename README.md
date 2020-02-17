@@ -28,14 +28,14 @@ If you have any Problems our Questions feel free to contatc us at violy-org@prot
 We are licensed under GPLv3. You can read the license details in [LICENSE](https://github.com/violyOS/violyOS/blob/master/LICENSE "LICENSE")
 
 ## Frequently Asked Questions [FAQ]
-**Q** - Why is violyOS open-source ?
+**Q** - Why is violyOS open-source ?  
 **A** - violyOS is open-source because we think that Code should be free. Also we are focussed on security and privacy and therefore it is important that our users don't have to trust us, they simply can read the code.
 
-**Q** - Will violyOS stay free ?
+**Q** - Will violyOS stay free ?  
 **A** - violyOS will always stay free.
 
-**Q** - Will there be a server version ?
+**Q** - Will there be a server version ?  
 **A** - No, because Linux already has good server distributions such as CentOS or Ubuntu and only needs help on the Desktop.
 
-**Q** - How can i contribute to this Project ?
+**Q** - How can i contribute to this Project ?  
 **A** - If you have any Ideas feel free to implement them and make a pull request. If you can't code open a new Issue with the label "feature"
