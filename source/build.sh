@@ -2,8 +2,8 @@
 
 set -e -u
 
-iso_name=archmid
-iso_label="ARCHMID_$(date +%Y%m)"
+iso_name=violyOS
+iso_label="violyOS_$(date +%Y%m)"
 iso_version=$(date +%Y.%m.%d)
 install_dir=arch
 work_dir=work
