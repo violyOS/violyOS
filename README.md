@@ -13,7 +13,7 @@
 
 
 ## What is violyOS ?
-violyOS is a GNU/Linux Distribution, which aims to be a secure, perfomant, good-looking and minimal Operating System.
+violyOS is a GNU/Linux Distribution, which aims to be a secure, perfomant, good-looking and minimal Operating System.  violyOS is not yet production ready so please use on your own risk.
 
 ## What are the goals of violyOS ?
 We want to build a System that is realiable, fast, secure and modern. Also we want to bring Linux to the Desktop for normal Users. So we our Operating System also aims to be easy to use. Our operating System is completly anonymous, no data of the user will be tracked. Our biggest goal is to replace Windows and OS X as fast as possible.
