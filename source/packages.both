@@ -1,5 +1,5 @@
 #######################
-## Archmid Specific ##
+## violyOS Specific ##
 #######################
 
 ##xorg packages
@@ -59,8 +59,7 @@ gnome-keyring
 mate-accountsdialog
 
 ##theme
-gnome-icon-theme
-numix-themes
+
 
 ##fonts
 ttf-dejavu
@@ -68,56 +67,21 @@ ttf-liberation
 cantarell-fonts
 
 ##environment
-bash-completion
-ncdu
-speedtest-cli
-pulseaudio
-pulseaudio-alsa
-pavucontrol
-volumeicon
+
 
 #AUR
-xfce4-dockbarx-plugin-git
-dockbarx-shinybar-theme
-engrampa-thunar
-gtk-theme-config
-google-chrome
-ultra-flat-icons
-localepurge
-mugshot
-profile-cleaner
-xame
-yaourt
-package-query-git
+firefox
+libreoffice-fresh
 
 ## GUI configuration
 xfce4
-xfce4-notifyd
 
 ##File Management
-xdg-user-dirs
-gvfs
-gamin
-thunar-archive-plugin
-tumbler
+
 
 ##applications
 gparted
-leafpad
-ristretto
-youtube-dl
-p7zip
-xfce4-screenshooter
-xfce4-whiskermenu-plugin
-parcellite
-mate-system-monitor
-tracker
-dosfstools
-ntfs-3g
 
-##vbox
-virtualbox-guest-modules-arch
-virtualbox-guest-utils
 
 ##packages for installer
 #hwinfo

@@ -2,7 +2,7 @@
 #
 # Arch Base Installation Framework (version 2.2 - 23-Mar-2016)
 #
-# Written by Carl Duff for PacBang Linux
+# Written by Carl Duff for violyOS Linux
 #
 # This program is free software, provided under the GNU General Public License
 # as published by the Free Software Foundation. So feel free to copy, distribute,
@@ -16,7 +16,7 @@
 ######################################################################
 
 # ISO Specific Variables
-ISO_HOST="archmid"                           		# ISO Host Name
+ISO_HOST="violyOS"                           		# ISO Host Name
 ISO_USER="liveuser"           						# Live user account
 VERSION="ARCH-MID Installation Framework 2.2"		# Installer Name / Version
 TRANS_SRC="/abif-master"							# Dir where translation files are stored
@@ -348,7 +348,7 @@ generate_fstab() {
 # Set the installed system's hostname
 set_hostname() {
 
-   dialog --backtitle "$VERSION - $SYSTEM ($ARCHI)" --title "$_HostNameTitle" --inputbox "$_HostNameBody" 0 0 "archmid" 2>${ANSWER} || config_base_menu
+   dialog --backtitle "$VERSION - $SYSTEM ($ARCHI)" --title "$_HostNameTitle" --inputbox "$_HostNameBody" 0 0 "violyOS" 2>${ANSWER} || config_base_menu
    HOST_NAME=$(cat ${ANSWER})
 
    echo "$HOST_NAME" > ${MOUNTPOINT}/etc/hostname

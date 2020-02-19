@@ -2,8 +2,8 @@
 
 set -e -u
 
-iso_name=pacbang
-iso_label="pacbang-$(date +%Y%m)-32bit"
+iso_name=violyOS
+iso_label="violyOS-$(date +%Y%m)-32bit"
 iso_version=$(date +%Y.%m)
 install_dir=arch
 work_dir=work

@@ -2,7 +2,7 @@
 
 set -e -u
 
-iso_name=violyOS
+iso_name=violyOS_$(date +%m.%Y)
 iso_label="violyOS_$(date +%Y%m)"
 iso_version=$(date +%Y.%m.%d)
 install_dir=arch

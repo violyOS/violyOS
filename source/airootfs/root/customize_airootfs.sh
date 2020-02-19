@@ -19,7 +19,7 @@ hwclock --systohc --utc
 echo "KEYMAP=us" > /etc/vconsole.conf
 
 # hostname
-echo "archmid" > /etc/hostname
+echo "violyOS" > /etc/hostname
 
 # root and live user
 usermod -s /bin/bash root
