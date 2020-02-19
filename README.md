@@ -6,9 +6,10 @@
 1. What is violyOS?
 2. What are the goals of violyOS ?
 3. Developement
-4. Support
-5. Licensing and Copyright
-6. Frequently Asked Questions [FAQ]
+4. Building
+5. Support
+6. Licensing and Copyright
+7. Frequently Asked Questions [FAQ]
 
 
 ## What is violyOS ?
@@ -20,6 +21,17 @@ We want to build a System that is realiable, fast, secure and modern. Also we wa
 ## Developement
 Developement happens in 'dev' branch. New versions will be merged to master.
 If you have any Ideas/Improvements feel free to implement them and make a pull request.
+
+## Building
+You can build violyOS like this:
+git clone https://github.com/violyOS/violyOS.git
+cd violyOS
+cp source/customrepo /home/YOUR_USERNAME
+sudo your_prefered_editor ~/archmid-iso/pacman.conf and edit Server=file:///home/YOUR_USERNAME/customrepo/$arch (near the bottom)
+cd ~/customrepo/x86_64
+sudo repo-add customrepo.db.tar.gz *.tar.xz
+go to the violyOS/source folder
+sudo ./build.sh
 
 ## Support
 If you have any Problems our Questions feel free to contatc us at violy-org@protonmail.com
