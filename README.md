@@ -26,14 +26,14 @@ If you have any Ideas/Improvements feel free to implement them and make a pull r
 
 ## Building
 You can build violyOS like this:
-git clone https://github.com/violyOS/violyOS.git
-cd violyOS
-cp source/customrepo /home/YOUR_USERNAME
-sudo your_prefered_editor ~/archmid-iso/pacman.conf and edit Server=file:///home/YOUR_USERNAME/customrepo/$arch (near the bottom)
-cd ~/customrepo/x86_64
-sudo repo-add customrepo.db.tar.gz *.tar.xz
-go to the violyOS/source folder
-sudo ./build.sh
+git clone https://github.com/violyOS/violyOS.git  
+cd violyOS  
+cp source/customrepo /home/YOUR_USERNAME  
+sudo your_prefered_editor ~/archmid-iso/pacman.conf and edit Server=file:///home/YOUR_USERNAME/customrepo/$arch (near the bottom)  
+cd ~/customrepo/x86_64  
+sudo repo-add customrepo.db.tar.gz *.tar.xz  
+go to the violyOS/source folder  
+sudo ./build.sh  
 
 ## Support
 If you have any Problems our Questions feel free to contatc us at violy-org@protonmail.com
