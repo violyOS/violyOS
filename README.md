@@ -11,6 +11,8 @@
 6. Licensing and Copyright
 7. Frequently Asked Questions [FAQ]
 
+[<img src="https://raw.githubusercontent.com/violyOS/violyOS/master/a32fbf6e-c448-11e6-8f19-bcd21b5e2f26.png">](https://violy-os.zulipchat.com/join/y303v061e73nvpt3re09olv5/)
+
 
 ## What is violyOS ?
 violyOS is a GNU/Linux Distribution, which aims to be a secure, perfomant, good-looking and minimal Operating System.  violyOS is not yet production ready so please use on your own risk.
@@ -24,14 +26,14 @@ If you have any Ideas/Improvements feel free to implement them and make a pull r
 
 ## Building
 You can build violyOS like this:
-git clone https://github.com/violyOS/violyOS.git
-cd violyOS
-cp source/customrepo /home/YOUR_USERNAME
-sudo your_prefered_editor ~/archmid-iso/pacman.conf and edit Server=file:///home/YOUR_USERNAME/customrepo/$arch (near the bottom)
-cd ~/customrepo/x86_64
-sudo repo-add customrepo.db.tar.gz *.tar.xz
-go to the violyOS/source folder
-sudo ./build.sh
+git clone https://github.com/violyOS/violyOS.git  
+cd violyOS  
+cp source/customrepo /home/YOUR_USERNAME  
+sudo your_prefered_editor ~/archmid-iso/pacman.conf and edit Server=file:///home/YOUR_USERNAME/customrepo/$arch (near the bottom)  
+cd ~/customrepo/x86_64  
+sudo repo-add customrepo.db.tar.gz *.tar.xz  
+go to the violyOS/source folder  
+sudo ./build.sh  
 
 ## Support
 If you have any Problems our Questions feel free to contatc us at violy-org@protonmail.com
