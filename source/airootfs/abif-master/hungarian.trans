@@ -1,372 +1,485 @@
 ##
-## 							
-## Angol nyelvi fájl (Architect 2.0)		
-##								
+##                      
+## Hungarian Translation File      
+##                        
 ##
-## Írta Carl Duff (27-Feb-2016)
+## Written by Istju for Architect Linux (11th September 2014)  beta v6.1
 ##
-## Fordító : Istju
+##
 
-# Általános
-_UseSpaceBar="Használd a [szóköz] billentyűt a felsorolt lehetőségek kijelöléséhez, illetve a kijelölés megszüntetéséhez."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-_AlreadyInst="Már telepítve van, de nincs engedélyezve."
-_All="Összes"
-_Done="Kész"
-_PlsWaitBody="\nKérlek várj...\n\n"
-_PassReEntBody="\nIsmételd meg a jelszót.\n"
-_ErrTitle="Hiba"
-_PassErrBody="\nA megadott jelszavak nem egyeznek. Kérlek próbáld újra.\n\n"
-
-# Biztonság és furmányos kiegészítések
-_SecMenuTitle="Biztonság és systemd lehetőségek"
-_SecJournTitle="Módosítandó journald naplózás"
-_SecCoreTitle="Memóriakép naplózás kikapcsolása"
-_SecKernTitle="Kernel naplók hozzáférésének korlátozása"
-_Edit="Konfigurációs fájl szerkesztése"
-_Disable="Letiltás"
-_SecMenuBody="\nNéhány hasznos és kezdő felhasználóbarát lehetőség elérhető a rendszerbiztonság és teljesítmény javítása érdekében.\n\nVálassz lehetőséget, és elérhetővé válnak a részletek."
-_SecJournBody="\nsystemd-journald gyűjti és tárolja a kernel és rendszernaplókat, az audit-nyilvántartást, a szabványos kimeneteket és a szolgáltatások hibaüzeneteit.\n\nAlapértelmezés szerint, egy tartós (nem felejtő) jurnal maximális mérete a gyökér partíciónak a 10%-a lehet. Például 500G gyökér partíció esetén 50G a limit a /var/log/journal fájlban az adat tárolásra. 50M elegendő lehet.\n\n"
-_SecCoreBody="\nA 'core dump' felvétel a számítógép memóriájáról, amikor a folyamatok összeomlanak.\n\nEz a fejlesztők számára hasznos de az átlagos felhasználónak nem, mivel pazarolja a rendszer erőforrásait és érzékeny adatokat tartalmazhat a jelszavakról és titkosítási kulcsokról.\n\nAz alapértelmezett 'systemd' viselkedés az, hogy memóriaképet készít az összes folyamatról a /var/lib/systemd/coredump fájlba. Ez a viselkedés felülírható egy beállítófájl létrehozásával az /etc/systemd/coredump.conf.d/ könyvtárba.\n\n"
+# Accessibility
+_InstAccOpt="Accessibility Packages (optional)"
+_InstAccTitle=" Install Accessibility Packages "
+_InstAccBody="Select desired accessibility packages."
 
 # btrfs
-_btrfsSVTitle="btrfs Alkötetek"
-_btrfsSVBody="Létrehozol btrfs alköteteket?\n\nEgy kezdeti alkötet fog létrejönni, majd csatolva lesz. Más alköteteket, melyek innen ágaznak le később lehet létrehozni.\n\nEgyébként kihagyhatod a közvetlen felcsatolási lehetőséget.\n"
-_btrfsMSubBody1="Írd be a kezdeti alkötet nevét a csatoláshoz (pl. ROOT). A csatolási lehetőségeket később választhatod ki. Először csatolod, a többi alkötetet ezután hozhatod létre. "
-_btrfsMSubBody2="ebbő ágazik le."
-_btrfsSVErrBody="Üres karakter, vagy szóköz nem engedélyezett. Kérlek próbáld újra.\n"
-_btrfsSVBody1="Írd be az alkötet nevét"
-_btrfsSVBody2="létrehozni ezen belül"
-_btrfsSVBody3="\n\nEz a folyamat addig folytatódik, amíg csillag(*) van beírva az alkötet nevéhez .\n\nLétrehozott alkötetek:"
-_btrfsMntBody="Használd a  [Szóköz] billentyűt a csatolni kívánt meghajtó kijelöléséhez, illetve a kijelölés törléséhez és nézd át újra gondosan. Kérjük ne válassz több változatot ugyanahhoz a lehetőséghez."
-_btrfsMntConfBody="Erősítsd meg a következő csatolási lehetőségeket:\n\n"
+_btrfsSVTitle=" btrfs Subvolumes "
+_btrfsSVBody="Create btrfs subvolumes?\n\nAn initial subvolume will be created and then mounted. Other subvolumes branching from this may then be created.\n\nOtherwise you can skip directly to the mounting options.\n"
+_btrfsSVTitle=" btrfs Subvolume Name "
+_btrfsMSubBody1="Enter the name of the initial subvolume to mount (e.g. ROOT). Mounting options may then be selected. Once mounted, all other subvolumes created for "
+_btrfsMSubBody2="will branch from it."
+_btrfsSVErrTitle=" btrfs Subvolume Name Error "
+_btrfsSVErrBody="Blanks or spaces are not permitted. Please try again.\n"
+_btrfsSVBody1="Enter the name of subvolume"
+_btrfsSVBody2="to create within"
+_btrfsSVBody3="\n\nThis process will be repeated until an asterisk (*) is entered as the subvolume name.\n\nCreated Subvols:"
+_btrfsMntTitle=" btrfs Mount Options "
+_btrfsMntBody="Use [Space] to de/select the desired mount options and review carefully. Please do not select multiple versions of the same option."
+_btrfsMntConfBody="Confirm the following mount options:\n\n"
 
-# Automata partícionálás
-_AutoPartBody1="Figyelmeztetés: Az összes adat a"
-_AutoPartBody2="törölve lesz.\n\nAz 512MB-os boot partíciótkell először létrehoznod, következö a  (root vagy '/') partíció az összes fennmaradó hely használatba vételével."
-_AutoPartBody3="Ha használni akarsz cserefájlt, válaszd a 'Swap File' lehetőséget csatolásnál.\n\nFolytatni akarod?"
+# Done!
+_DoneMsg="\nDone!\n\n"
 
-# Hibaüzenetek. Az összes többi létre lesz hozva a BASH által.
-_ErrNoMount="\nA partíciót (partíciókat) csatold először.\n\n"
-_ErrNoBase="\nAz 'Arch base'-t kell először telepíteni.\n\n"
-_ErrNoKernel="\nLegalább egy kernelt (linux vagy linux-lts) kell választanod.\n\n"
-
-# Vbox telepítés
-_VBoxInstTitle="VirtualBox telepítés "
-_VBoxInstBody="\nHa bármely okból a VirtualBox guest modulok nem töltődnek be a telepített rendszernél (pl. alacsony felbontás és gördítősáv boot után), a következő parancsok sorozatával javíthatod ezt:\n\n$ su\n# depmod -a\n# modprobe -a vboxvideo vboxguest vboxsf\n# reboot"
-
-# Konfigurációs fájlok kiválasztása
-_SeeConfOptTitle="Konfigurációs fájlok áttekintése"
-_SeeConfOptBody="\nA felsorolt listából jelöld ki bármelyik fájlt felülvizsgálatra, vagy módosításra.\n"
-_SeeConfErrBody="\nA fájl nem létezik.\n\n"
-
+# Please wait...
+_PlsWaitBody="\nKérlek várj...\n\n"
+ 
+# Error Messages. All others are generated by BASH.
+_ErrTitle=" Hiba "
+_ErrNoMount="\nA partíciókat csatold fel először.\n\n"
+_ErrNoBase="\nAz Arch alaprendszert telepítsd először.\n\n"
+ 
+# Vbox Installations
+_VBoxInstTitle=" Telepítés virtualboxba "
+_VBoxInstBody="\nHa bármilyen okból a VirtualBox guest modulok nem töltődnek be a telepített rendszerre (pl:alacsony felbontású és görgetősávos a képernyő rendszerindítás után ), a következő parancsok sorozatával javíthatod ezt:\n\n$ su\n# depmod -a\n# modprobe -a vboxvideo vboxguest vboxsf\n# reboot"
+ 
+# Select Wireless Firmware Driver(s)
+_InstWirelessFirm="Vezeték nélküli eszköz firmware telepítése"
+_WirelssFirmTitle=" Vezeték nélküli eszköz firmware kiválasztása "
+_WirelssFirmBody="\nBizonyos vezeték nélküli eszközök további firmware telepítését is megkövetelhetik a működésük érdekében.\n\nHa nem tudod melyiket kell telepítened, vagy melyiket válaszd, akkor az összeset is telepítheted."
+_SeeWirelessDev="Vezeték nélküli eszközök kijelzése (választható)"
+_WirelessShowTitle=" Vezeték nélküli eszköz "
+_WirelessErrBody="\nNem található."
+_All="All"
+ 
+# Select Config Files
+_SeeConfOpt="Konfigurációs fájlok áttekintése (választható)"
+_SeeConfOptTitle=" Konfigurációs fájlok "
+_SeeConfOptBody="\nVálassz fájlt az alábbi listából áttekintéshez vagy módosításhoz.\n"
+_SeeConfErrTitle=" Hibák áttekintése "
+_SeeConfErrBody1="\nA fájl nem létezik.\n\n"
+_SeeConfErrBody2="\nElőször az alaprendszert telepítsd.\n\n"
+ 
 # Pacman
 _PrepPacKey="Pacman kulcsok frissítése"
-
-# LUKS / DM-Crypt / Titkosítás
-_PrepLUKS="LUKS Titkosítás (választható)"
-_LuksMenuBody="\nEszközök és kötetek titkosítása 'dm_crypt' használatával. Kulcs vagy jelszó használata nélkül nincs hozzáférés vagy akár nem láthatóak az adatok."
-_LuksMenuBody2="\n\nTitkosítatlan , különálló boot partíció, vagy logikai kötetkezelő (LVM - hacsak BIOS Grub-ot használsz) szükséges."
-_LuksMenuBody3="\n\nAz automatikus lehetőség az alapértelmezett titkosítási beállításokat használja, ez a kezdőknek ajánlott. Egyébként van lehetőség a rejtjel és a kulcs méret paraméterjeinek kézi megadására."
-_LuksOpen="Titkosított partíció kinyitása"
-_LuksOpenBody="\nAdj egy nevet a titkosított block eszköznek. Nem szükséges, hogy az előtag tartalmazza a /dev/ leképezőt. Egy példa biztosított."
-_LuksEncrypt="Automatikus LUKS Titkosítás"
-_LuksEncryptAdv="Határozd meg a kulcs méretét és a rejtjelezés típusát"
-_LuksEncryptBody="\nVálaszd ki a titkosítandó partíciót."
-_LuksEncruptSucc="\nKész! Kinyílt, és kész az LVM (ajánlott) vagy direkt csatolásra.\n"
-_LuksPartErrBody="\nMinimum kettő partícióra van szükség a titkosításhoz:\n\n1. Root (/) - normál vagy lvm partíció.\n\n2. Boot (/boot or /boot/efi) - csak normál partíció (kivéve lvm-nél ha BIOS Grub-ot használsz).\n"
-_SelLuksRootBody="\nVálaszd a gyökér (/) partíciót titkosításra. Ez az, ahová az Arch lesz telepítve.\n\n"
-_LuksPassBody="\nAdj meg egy jelszót a partíció titkosításához, illetve a titkosítás feloldásához. Ez nem egyezhet sem a rendszergazda, sem a felhasználói jelszóval.\n"
-_LuksWaitBody="\nTitkosított gyökér partíció létrehozása:"
-_LuksWaitBody2="Használt eszköz vagy kötet:"
-_LuksCipherKey="\nHa a megadott zászlókat módosítod, ezt automatikusan használva lesz a  'cryptsetup -q luksFormat /dev/...' parancssal.\n\nMegjegyzés: Kulcs fájlok nem támogatottak; ezeket manuálisan kell hozzáadni telepítés után. Ne add meg a további zászlókat, mint a  -v (--verbose) vagy -y (--verify-passphrase).\n"
-
-# Logikai kötetkezelés
-_PrepLVM="Logikai kötetkezelés"
-_PrepLVM2="(választható)"
-_LvmMenu="\nA logikai kötetkezelő (LVM) lehetővé teszi 'virtuális' merevlemezek (Kötetcsoportok) és partíciók (logikai kötetek) létrehozását  a meglévő meghajtóra és partícióra A kötetcsoportot kell létrehozni először, majd ebben egy vagy több logikai kötetet.\n\nAz LVM is használható titkosított partíciónál, ha több logikai kötete hozol létre benne. (pl. root és home) "
-_LvmCreateVG="Kötetcsoport és logikai kötet(ek) létrehozása"
-_LvmDelVG="Kötetcsoport törlése"
-_LvMDelAll="Minden törlése; kötetcsopot(ok), logikai kötet(ek), fizikai kötet(ek)"
-_LvmDetBody="\nMeglévő logikai kötetkezelőt (LWM) érzékeltem. Aktiválás. Kérlek várj...\n\n"
-_LvmPartErrBody="\nNincs életképes elérhető partíció a logikai kötetkezelő (LWM) számára. Minimum egy szükséges.\n\nHa az LVM már használatban van, kapcsold ki, hogy lehetővé tedd a fizikai kötet(ek) által használt partíció(k) újra felhasználását.\n\n"
-_LvmNameVgBody="\nAdd meg a létrehozni kívánt kötetcsoport (VG) nevét.\n\nAz új kötetcsoport (VG) az új 'virtuális eszköz / merevlemez' , amit készítesz a következő partíció(k)ból.\n"
-_LvmNameVgErr="\nÉrvénytelen a beírt név. A kötetcsoport neve lehet alfanumerikus, de nem tartalmazhat szóközt és nem kezdődhet '/' jellel, vagy a név már használatban van.\n\n"
-_LvmPvSelBody="\nVálassz partíciót, vagy partíciókat a fizikai kötet (PV) felhasználásához.\n\n"
-_LvmPvConfBody1="\nErősítsd meg a kötetcsoport létrehozását "
+ 
+# Logical Volume Management
+_PrepLVM="Logikai kötetkezelő (választható)"
+ 
+_LvmDetTitle=" LVM érzékelve "
+_LvmDetBody1="\nMeglévő logikai kötetkezelő (LVM) érzékelve . A partíciók már használatban vannak, az LVM nem tud választani. Ki akarod kapcsolni a meglévő LVM-et?\n\nVálassz 'Igen' -t a meglévő LVM eltávolításához.\nVálassz 'Nem' -et a megtartáshoz.\n"
+_LvmRmTitle=" LVM kikapcsolása "
+_LvmDetBody2="\nMeglévő logikai kötetkezelő (LVM) érzékelve. Aktiválás. Kérlek várj...\n\n"
+_LvmRmBody="\nDeaktiválom az összes meglévő fizikai kötetet, Kötetcsoportot, és a logikai köteteket.\n\nKérlek várj...\n\n"
+ 
+_LvmPartErrTitle=" LVM partíció hiba "
+_LvmPartErrBody="\nNincsenek elérhető működőképes partíciók , amit a logikai kötetkezelő használhatna. Legalább egy szükséges.\n\nHa az LVM már használatban van, kapcsold ki, hogy lehetővé tedd azon partíciók újra felhasználását, amit a fizikai kötetek használnak.\n\n"
+ 
+_LvmNameVgTitle=" LVM - Kötetcsoport neve "
+_LvmNameVgBody="\nAdja meg a kötetcsoport nevét, amit létre akar hozni.\n\nA Kötetcsoport egy új 'virtuális ezköz/merevlemez', amit előkészítesz a továbbiakban kiválasztandó partíciók számára.\n"
+ 
+_LvmNameVgErrTitle=" LVM - Kötetcsoport elnevezési hiba "
+_LvmNameVgErr="\nÉrvénytelen beírt név. A csoport neve alfa-numerikus karakterkészletből állhat, de nem kezdődhet '/' -jellel, és nem tartalmazhat szóközt, vagy a kiválasztott név már használatban van.\n\n"
+ 
+ 
+_LvmPvSelTitle=" LVM - Válassz partíciót "
+_LvmPvSelBody="\nVálassz partíciókat a fizikai kötet számára(PV).\n"
+_LvmPvCreateTitle=" LVM - Partíció hozzáadva "
+ 
+_LvmPvConfTitle=" LVM - Kötetcsoport készítése "
+_LvmPvConfBody1="\nErősítse meg a kötetcsoport létrehozását "
 _LvmPvConfBody2="a következő partíciókkal:\n\n"
-_LvmPvActBody1="\nKötetcsoport készítése és aktiválása "
+ 
+_LvmPvActTitle=" LVM - Kötetcsoport létrehozása "
+_LvmPvActBody1="\nKötetcsoport létrehozása és aktiválása "
+_LvmPvActBody2="\n\nKérlek várj...\n\n"
+ 
+_LvmPvDoneTitle=" LVM - kötetcsoport létrehozva "
 _LvmPvDoneBody1="\nKötetcsoport "
-_LvmPvDoneBody2="létrehozva"
-_LvmLvNumBody1="\nHasználd a  [Szóköz] billentyűt a létrehozandó logikai kötet(ek) (LVs) számának kiválasztásához"
-_LvmLvNumBody2="\n\nAz utolsó (vagy egyetlen) logikai kötet automatikusan felhasználja a fennmaradó hely 100%-át a kötetcsoportban."
-_LvmLvNameBody1="\nÍrja be a logikai kötet nevét a létrehozáshoz.\n\nEz egy olyan névbeállítás, mint egy partíció cimke.\n"
-_LvmLvNameBody2="\nMegjegyzés: Ez a logikai kötet automatikusan használatba veszi az összes fennmaradó helyet a kötetcsoportban"
-_LvmLvNameErrBody="\nÉrvénytelen a beírt név. A kötetcsoport (LV) neve lehet alfanumerikus, de nem tartalmazhat szóközt és nem kezdődhet '/' jellel,\n\n"
-_LvmLvSizeBody1="hátralevő"
-_LvmLvSizeBody2="\n\nAdjad meg a logikai kötet (LV) méretét megabájtban (M), vagy gigabájtban (G). Például 100M esetén 100 megabájtot, míg 10G esetén 10 gigabájt logikai kötetet (LV) hozol létre.\n"
-_LvmLvSizeErrBody="\nÉrvénytelen megadott érték. Egy számot kell beírni egy 'M' (megabájtal), vagy a 'G' (gigabájtal) a végén.\n\nPéldául: 100M, 10G, vagy 250M. Az érték soha nem lehet nagyobb, mint a kötetcsoport (VG) mérete.\n\n"
-_LvmCompBody="\nKész! Minden logikai kötet létrehozva a kötetcsoportban.\n\nSzeretnéd megtekinteni az új LWM elrendezést?\n\n"
-_LvmDelQ="\nKötetcsoport(ok) és logikai kötet(ek) törlésének megerősítése.\n\nHa törlöd a kötetcsoportot, akkor az ezen belül létrehozott összes logikai kötet törlődik.\n\n"
-_LvmSelVGBody="\nVálassz kötetcsoportot a törlésre. Az összes logikai kötet ezen belül törlődni fog\n"
-_LvmVGErr="\nKötetcsoport nem található\n\n"
-
-# Eszközök és partíciók áttekintése
+_LvmPvDoneBody2="létre lett hozva"
+ 
+_LvmLvNumTitle=" LVM - Logikai kötet készítése "
+_LvmLvNumBody1="\nAdd meg a készítendő logikai kötetek számát "
+_LvmLvNumBody2="Minimum 1, maximum 9 lehet.\n\nEzek a logikai kötetek lényegében partíciók. Az utolsó (vagy egyetlen) logikai kötet automatikusan felhasználja a fennmaradó hely 100% -át a kötetcsoportban."
+ 
+_LvmLvNumErrTitle=" LVM - Logikai kötet szám hiba "
+_LvmLvNumErrBody="\nÉrvénytelen számot adtál meg. A szám minimum 1, maximum 9 lehet.\n\n"
+ 
+_LvmLvNameTitle=" LVM - Logikai Kötet elnevezése "
+_LvmLvNameBody1="\nAdd meg a készítendő logikai kötet  nevét.\n\nEz a partíció nevének (címke) beállítása.\n"
+_LvmLvNameBody2="\nMegjegyzés: Ez a logikai kötet automatikusan felhasználja az összes fennmaradó helyet a kötetcsoportban."
+ 
+_LvmLvNameErrTitle=" LVM - Logikai kötet név hiba "
+_LvmLvNameErrBody="\nÉrvénytelen nevet adtál meg. A logikai kötet neve alfa-numerikus karakterkészletből állhat, de nem kezdődhet '/' -jellel, és nem tartalmazhat szóközt.\n\n"
+ 
+_LvmLvSizeTitle=" LVM - Logikai kötet méretének beállítása "
+_LvmLvSizeBody1="fennmaradó"
+_LvmLvSizeBody2="\n\nAdd meg a logikai kötet  méretét Megabyte -ban (M) vagy Gigabyte -ban (G). Például 100M létre fog hozni egy 100 Megabyte -os, 10G létre fog hozni egy 10 Gigabyte -os logikai kötetet.\n"
+ 
+_LvmLvSizeErrTitle=" LVM - Logikai kötet méret hiba "
+_LvmLvSizeErrBody="\nÉrvénytelen értéket adtál meg. Numerikus értéket (számot) kell beírni egy 'M' (megabájt), vagy a 'G' (gigabájt) -al a végén. \n\nPéldául lehet, 100M, 10G, vagy 250M. Az érték, nem lehet egyenlő vagy nagyobb, mint a fennmaradó mérete a kötetcsoportnak.\n\n"
+ 
+_LvmLvDoneTitle=" LVM - Logikai kötet készítés "
+ 
+_LvmCompTitle=" LVM - A folyamat véget ért "
+_LvmCompBody="\nKész! Az összes logikai kötet létrehozva a kötetcsoportban.\n\nSzeretnéd megtekinteni az új LWM rendszert?\n\n"
+ 
+ 
+# Show devices and partitions
+_DevShowTitle=" Eszközök / Partíciók "
 _DevShowOpt="Eszközök listája (választható)"
-
-# Követelmények ellenőrzése
-_ChkTitle="Követelmények újraellenőrzése"
-_ChkBody="\nA telepítő újraellenőrzi a rendszergazdai jogog meglétét, és aaz aktív internet kapcsolatot. Kérlek várj...\n\n"
-_RtFailBody="\nA telepítőnek rendszergazdai jogok szükségesek. Kilépés.\n\n"
-_ConFailBody="\nNincs aktív internet kapcsolat. Kilépés.\n\n"
-_ReqMetTitle="Követelmények teljesítve"
-_ReqMetBody="\nÖsszes ellenőrzés rendben!\n\n"
-
-
-# Tükörlista telepítése
-_MirrorlistTitle="Tükörlista"
-_MirrorlistBody="\nA tükörlista szerver címeket tartalmaz a 'pacman' csomagok telepítésére. Ahhoz, hogy megtaláljad a leggyorsabb szervert, először hozz létre egy tükörlistát a tartózkodási helyed alapján, mielőtt futtatnád a tükrök rangsorolását, különben ez a folyamat hosszú időt vesz igénybe.\n\nA pacman konfigurációs fájl szerkesztheted, hogy engedélyezd a 'multilib', vagy más tárolókat.\n\nMegjegyzés: Szövegfájl bezárása a  '[CTRL] + [x]' billrntyű kombinációval. Ha szerkesztetted, akkor nyomj  [i]  billentyűt a mentéshez, vagy to [n] billentyűt a változtatások eldobásához.\n"
-_MirrorbyCountry="Tükörlista létrehozása ország alapján"
-_MirrorEdit="Tükörlista kézi szerkesztése"
-_MirrorRankTitle="Tükörlista rangsorolás futtatása"
-_MirrorRestTitle="Eredeti tükörlista helyreállítása"
-_MirrorRankBody="\nA leggyorsabb szerver megkeresése a tükörlistából."
+ 
+# Check Evo Requirements and Identify System Type
+_ChkTitle=" Követelmények újraellenőrzése "
+_ChkBody="\nA telepítő újraellenőrzi a rendszergazdai jogok meglétét, és az aktív internet kapcsolatot. Kérlek várj...\n\n"
+ 
+_RtFailTitle=" Hiba a rendszergazdai jogokkal "
+_RtFailBody="\nA telepítőt rendszergazdaként futtasd. Kilépés.\n\n"
+ 
+_ConFailTitle=" Hálózati hiba "
+_ConFailBody="\nInternet csatlakozás nem sikerült. Kilépés.\n\n"
+ 
+_ReqMetTitle=" A követelmények teljesítve "
+_ReqMetBody="\nÖsszes ellenőrzés rendben! \n\n"
+ 
+_UefiDet="UEFI rendszert találtam"
+_BiosDet="BIOS rendszert találtam"
+ 
+# Installer Mirrorlist
+_MirrorlistTitle=" Tükörlista "
+_MirrorlistBody="\nA tükörlista, szerver címeket tartalmaz, amiket a pacman használ a csomagok telepítésére. Ezek a pacman számára a megadott sorrendben elérhetőek.\n\n"
+_MirrorbyCountry="Lista készítése ország alapján"
+_MirrorEdit="Tükörlista szerkesztése kézzel"
+_MirrorRank="A tökörlista rendezése sebesség szerint. A leggyorsabb szerverek kerülnek előre"
+_MirrorRestore="Eredeti tükörlista helyreállítása"
+_MirrorRankTitle=" Tükörlista rangsorolása "
+_MirrorRankBody="\nA leggyorsabb szerver keresése a tükörlistán. Kérlek várj...\n\n"
+_MirrorRankDone="\nKész! A tükörlista a szerverek sebessége alaján rendezve.\n\n"
+_MirrorRestDone="\nKész! Az eredeti tükörlista helyreállítva.\n\n"
+_MirrorNoneTitle=" Tükörlista hiba "
 _MirrorNoneBody="\nAz eredeti tükörlista másolata nem található.\n\n"
-_MirrorCntryBody="\nA választott ország szerinti listát létrehoztam.\n"
-_MirrorGenQ="A létrehozott tükörlistát használja a telepítő?"
-_MirrorPacman="'Pacman' konfiguráció szerkesztése"
-_MIrrorPacQ="\nHasználod a szerkesztett 'pacman' beállítást a telepített rendszerre? Ha igen, akkor a fájlt átmásoljuk az alaptelepítés után\n\n"
-
-# Konzolos billentyűzetkiosztás beállítása
-_VCKeymapTitle="Virtuális konzol beállítása"
-_VCKeymapBody="\nA virtuális konzol egy 'shell prompt' nem grafikus környezetben. Ez a billentyűzetkiosztás független az asztali környezettől."
-
-# Billentyűzet beállítása asztali környezetben
-_XkbmapBody="\nVálassz billentyűzetkiosztást az asztali környezetbe."
-
-# Tartózkodási hely beállítása
-_localeBody="A tartózkodási hely beállítása meghatározza a megjelenítebdő nyelvet, időt és dátum formátumot stb\n\nA nyelv formátum ország alapján kerül beállításra. (pl. en_US az angol, hu_Hu az magyar)."
-
-# Időzóna beállítása
-_TimeZBody="\nAz időzónát a rendszeróra helyes beállítására használják"
-_TimeSubZBody="\nVálaszd ki a hozzád legközelebb álló várost ."
-_TimeZQ="\nIdőzóna beállítása mint"
-
-# Hardveres óra beállítása
-_HwCBody="\nA 'UTC' az univerzális időszabvány, és ez a javasolt ha kettős indítást használsz windows-al.."
-
-# FSTAB generálása
-_FstabBody="\Az fstab fájl (File System Table) meghatározza, hogy melyik tároló eszközöket és partíciókat kell felcsatolni, és hogyan kell használni.\n\n \UUID (univerzálisan egyedi azonosító) ajánlott\n\n.Ha a korábbiakban nem volt címke állítva a partíciókhoz, az eszközök nevei fogják használni a címke lehetőséget."
-_FstabErr="\nA UUID csatolási ehetőség csak UEFI/GPT telepítéshez használható.\n\n"
-_FstabDevName="Eszköz neve"
-_FstabDevLabel="Eszköz címke"
-_FstabDevUUID="Eszköz UUID"
-_FstabDevPtUUID="UEFI rész UUID"
-
-# Gazdagépnév (hosztnév) beállítása
-_HostNameBody="\n\A házigazda nevének azonosítására használja rendszer a hálózaton keresztül.n\nEz a név alfanumerikus karakterekből állhat és tartalmazhat kötőjelet (-), de nem az elején és a végén, és nem lehet hosszabb 63 karakternél.\n"
-
-# Rendszergazda jelszó beállítása
-_PassRtBody="\nAdd meg a rendszergazda jelszavát\n\n"
-_PassRtBody2="\nIsmételd meg a rendszergazda jelszavát\n\n"
-
-# Új felhasználó létrehozása
-_NUsrTitle="Új felhasználó létrehozása"
-_NUsrBody="\nAdd meg a felhasználónevet. Csak kisbetűket használhatsz.\n"
-
-# Felhasználónév hiba
-_NUsrErrTitle="Felhasználónév hiba"
-_NUsrErrBody="\nHelytelen felhasználónevet adtál meg. Kérlek próbáld újra.\n\n"
-
-# A felhasználó beállítása
-_PassNUsrBody="\nAdd meg a jelszót" 
-_NUsrSetBody="\nFelhasználó létrehozása és csoportok beállítása...\n\n"
-
-# Csatolás (Partíciók)
-_MntStatusTitle="Csatolási állapot"
-_MntStatusSucc="\nCsatolás sikeres!\n\n"
+ 
+# Generate Mirrorlist by country
+_MirrorCntryTitle=" Válassz országot "
+_MirrorCntryBody="\nA tükörlistát a választott ország alapján hozom létre\n\nMiután áttekintetted, választhatsz ezt használod, vagy maradsz az alapértelmezettnél."
+_MirrorGenTitle=" Tükörszerver lista létrehozása "
+_MirrorGenBody="\nLétrehozok egy tükörlistát. Kérlek várj... "
+_MirrorGenQ="Használod a továbbiakban a telepítő álltal létrehozott tükörlistát?"
+_MirrorGenDone="\nKész! Az eredeti tükörlistát mentettem, mint:\n\n/etc/pacman.d/mirrorlist.orig\n\n"
+ 
+# Set Keymap (vconsole)
+_KeymapTitle=" Válassz billentyűzetkiosztást konzolra "
+_KeymapBody="\nHasználd a [pg up] és [pg dwn] billentyűket a navigáláshoz, vagy nyomd le az első betűjét a kiosztásnak nevének, ha ismered."
+ 
+# Set Xkbmap (environment)
+_XkbmapTitle=" Válassz billentyűkiosztást a grafikus felületre"
+_XkbmapBody="Válassz billentyűzet elrendezést"
+ 
+# Set Locale
+_LocateTitle=" Tartózkodási hely választása "
+_localeBody="Válassz tartózkodási helyet"
+ 
+# Set Timezone
+_TimeZTitle=" Időzóna beállítása "
+_TimeZBody="\nAz időzónát arra használják, hogy beállítsa a rendszerórát a helyi időre."
+_TimeSubZTitle=" Válassz idő alzónát "
+_TimeSubZBody="\nVálaszd ki a hozzád legközelebb eső várost."
+_TimeZQ="Idő beállítása a zóna szerint"
+ 
+# Set Hardware Clock
+_HwCTitle=" Hardveres óra beállítása "
+_HwCBody="\nUTC az univerzális időszabvány, és ez a javasolt, kivéve dual-boot Windows esetében."
+_HwCUTC="UTC"
+_HwLocal="Helyi idő"
+ 
+# Generate FSTAB
+_FstabTitle=" FSTAB létrehozása "
+_FstabBody="\nAz fstab fájl (Fájlrendszer táblázat) határozza meg, hogy mely tároló eszközöket, partíciókat fogunk felcsatolni, és ezeket hogy használjuk.\n\nUUID/PARTUUID (Univerzális egyedi azonosító) a javasolt.\n\nHa nem volt címke beállítás a partícióknál korábban, az eszközök neveit fogjuk használni a címke lehetőségnél."
+_FstabDev="Eszköz (Dev) (partíció kód)"
+_FstabLabel="Címke (Label) (felhasználó által definiált)"
+_FstabUUID="UUID/PARTUUID (egyedi azonosító)"
+ 
+# Check FSTAB
+_FstabChkTitle=" FSTAB áttekintése"
+_FstabChkBody="\nKérlek ellenőrizd az fstab fájlt , mielőtt bezárnád ezt a folytatáshoz.\n\n"
+ 
+# Set Hostname
+_HostNameTitle=" Hosztnév beállítása "
+_HostNameBody="\nA hoszt nevet a rendszer azonosítására használják a hálózaton.\n\nA hosztnév betűkből és számokból állhat, tartalmazhat kötőjelet (-) - de nem az elején és a végén- és nem lehet hoszabb 63 karakternél\n"
+ 
+# Set Root Password
+_PassRtTitle=" Rendszergazda jelszó beállítása "
+_PassRtBody="\nAdd meg a rendszergazdai jelszót\n\n"
+_PassRtBody2="\nIsmételd meg a rendszergazdai jelszót\n\n"
+ 
+# Root Password Error
+_PassRtErrTitle=" Rendszergazdai jelszó hiba "
+_PassRtErrBody="\nA jelszavak nem egyeznek meg. Kérlek próbáld újra.\n\n"
+ 
+# Create New User
+_NUsrTitle=" Új felhasználó létrehozása "
+_NUsrBody="\nAdd meg a felhasználó nevét. A betűk csak kisbetűk lehetnek.\n"
+ 
+# Username Error
+_NUsrErrTitle=" Felhasználó név hiba "
+_NUsrErrBody="\nÉrvénytelen felhasználó név. Kérlek próbáld újra.\n\n"
+ 
+# Set User Password
+_PassNUsrTitle=" Felhasználó jelszavának beállítása "
+_PassNUsrBody="\nAdd meg a jelszót"
+_PassNUsrBody2="\nIsmételd meg a jelszót"
+ 
+# Create New User
+_NUsrSetTitle=" Felhasználó beállítása "
+_NUsrSetBody="\nFelhasználó beállítása, és csoportok létrehozása...\n\n"
+ 
+# User Password Error
+_PassNUsrErrTitle=" Felhasználó jelszó hiba "
+_PassNUsrErrBody="\nA megadott jelszavak nem egyeznek. Kérlek próbáld újra.\n\n"
+ 
+# Mounting (Partitions)
+_MntStatusTitle=" A csatolás állapota "
+_MntStatusSucc="\nA csatolás sikeres!\n\n"
 _MntStatusFail="\nCsatolási hiba!\n\n"
-_WarnMount1="\nFontos: Partíciók csatolhatóak formázás nélkül is, válaszd ki ezeket"
-_WarnMount2="a lehetőségek listázva vannak a fájl rendszer menüben felül.\n\nBiztosítsd a helyes választást a csatoláshoz és formázáshoz, ezek biztosítják a figyelmeztetés nélküli folyamatot., az UEFI boot partíció kivételével.\n\n"
-
-# Eszközválasztás  (telepítés)
-_DevSelTitle="Válassz eszközt"
-_DevSelBody="\nRendelkezésre álló eszközök, (/dev) merevlemezek és usb kulcsok a telepítéshez. Az első a /sda, a második a /sdb, ás így tovább.\n\nLégy óvatos, az usb kulcs, amiről  bebootolt az Arcitect, az is szerepel ezen a listán!"
-
-# Particionáló eszköz
-_PartToolTitle="Particionáló eszközl"
-_PartToolBody="\nAutomatikus particíonálási lehetőség elérhető a kezdőknek. Egyébként, a 'cfdisk' az ajánlott a BIOS-hoz, 'parted' az UEFI-hez.\n\nNe válassz csak UEFI/GPT partícionáló eszközt a BIOS/MBR rendszerhez mivel ez súlyos problémákhoz vezethet, beleérte a nem bootoló telepítést."
-_PartOptAuto="Automata partícionálás"
-_PartOptWipe="Biztos eszköz törlés (választható)"
-_AutoPartWipeBody1="\nFigyelmeztetés: Minden adat"
-_AutoPartWipeBody2="meg fog semmisülni a 'wipe -Ifre' parancs használatával. Ez a folyamat hosszú időt vesz igénybe és ez az idő függ a készülék méretétől. Folytatni szeretnéd?\n"
-
-# Partícionálási hiba
-_PartErrBody="\nBIOS rendszereknél a minimális követelmény egy partíció (ROOT).\n\nUEFI rendszernél a minimális követelmény kettő partíció (ROOT and UEFI).\n\n"
-
-# Fájlrendszer
-_FSTitle="Válassz fájlrendszert"
-_FSBody="\nExt4 az ajánlott. Nem minden fájlrendszer alkalmas  Root vagy Boot partíció számára. A fájrendszerek különböző funkciókat és korlátokat tartalmaznak."
-_FSSkip="Kihagyás / egyik sem" 
-
-# Gyökérpartíció (ROOT) kiválasztása
-_SelRootBody="\nVálassz gyökérpartíciót (ROOT). Ez lesz ahová az Archot telepítjük."
-
-# Cserepartíció (SWAP) kiválasztása
-_SelSwpBody="\nVálassz cserepartíciót (SWAP). Ha lapozófájlt használsz ezzel létrejön a RAMmal azonos méretű cserefájl."
+ 
+# Select Device (installation)
+_DevSelTitle=" Eszközválasztás "
+_DevSelBody="\nEszközök, (/dev) a telepítés számára elérhető merevlemezek és USB eszközök. Az első a /sda, a második a /sdb, és így tovább.\n\nHa USB eszközt használtál az Architect indítására, légy óvatos, mert az is az eszközök között szerepel!"
+ 
+# Select Device (Grub) - seperate body text is not required (uses standard device selection text)
+_DevSelGrubTitle=" Válassz rendszerindító eszközt "
+ 
+ 
+# Partitioning Tool
+_PartToolTitle=" Particionáló eszköz "
+_PartToolBody="\nGParted az ajánlott felhasználóbarát grafikus eszköz, ami támogatja a  BIOS és UEFI rendszereket egyaránt.\n\nNe válassz kizárólag UEFI/GPT -particionáló eszközt a BIOS/MBR rendszerekhez, mivel ez komoly problémákat okozhat, beleértve a nem boot-oló telepítést."
+ 
+# UEFI Partitioning Error
+_UefiPartErrTitle=" UEFI Particionálási hiba "
+_UefiPartErrBody="\nUEFI rendszerek esetében legalább két partícióra van szükség a telepítéshez (gyökér és a UEFI).\n\nKérlek konfiguráld a partíciókat.\n\n"
+ 
+# BIOS Partitioning Error
+_BiosPartErrTitle=" BIOS Particionálási hiba "
+_BiosPartErrBody="\nBIOS rendszereknél minmum egy partíció kell a telepítéshez (gyökér).\n\n Kérlek állítsd be a partíciót."
+ 
+# File System
+_FSTitle=" Fájlrendszer választása "
+_FSBody="\nAz Ext4 fájlrendszer az ajánlott. Nem minden fájlrendszer életképes gyökér vagy boot partíció számára. A különböző partíciók eltérő funkciókkal és korlátozásokkal rendelkeznek."
+_FSSkip="Átugrás / Egyik sem"
+ 
+# Select Root
+_SelRootTitle=" Válassz gyökér partíciót "
+_SelRootBody="\nEz lesz az a partíció, ahová az Arch -ot telepítjük"
+ 
+# Select SWAP
+_SelSwpTitle=" Válassz csere patíciót"
+_SelSwpBody="\nHa lapozó fájlt használsz, akkor a mérete ugyanakkora lesz, mint a fizikai memória mérete."
 _SelSwpNone="Egyik sem"
-_SelSwpFile="Cserefájl"
+_SelSwpFile="Lapozófájl"
+ 
+# Select UEFI
+_SelUefiTitle=" UEFI partíció választása "
+_SelUefiBody="\nEz egy speciális partíció UEFI rendszerek indítása számára."
+ 
+# Format UEFI
+_FormUefiTitle=" UEFI partíció "
+_FormUefiBody="Az UEFI partíció"
+_FormUefiBody2="A partíció már formázva van.\n\nÚjraformázod?  Ha így teszel, az összes adatod törlődik az adott partícióról\n\n"
+ 
+# UEFI Options
+_OptUefiTitle=" UEFI csatolási pont opciók "
+_OptUefiBody="\nA később telepíthető rendszerbetöltők választéka függ az UEFI partíció csatolási pontjától.\n\n- A Grub2-nek nincs csatolási pont igénye.\n- A Gummiboot (ajánlott) /boot-ra csatolást igényel.\n-  A rEFInd /boot/efi-re csatolást igényel.\n\nMEGJEGYZÉS: A rEFInd nem támogatja az LVM köteteket (vagy partíciókat), és a telepítést kézzel kell frissíteni. rEFInd -ot ezért, csak a gyakorlott felhasználóknak ajánljuk.\n"
+ 
+# UEFI Mountpoint
+_MntUefiTitle=" Válassz UEFI csatolási pontot "
+_MntUefiBody="\nA rEFInd -nak szükséges /boot/efi mappa felcsatolása. systemd-boot-nak szükséges /boot mappa felcsatolása. Grub2 működik akár."
+ 
+# Extra Partitions
+_ExtPartTitle=" További partíciók kiválasztása "
+_ExtPartBody="\nVálassza ki a további partíciókat bármilyen sorrendben, vagy a 'Kész' opciót a véglegesítéshez."
+ 
+# Name Extra Parti tions
+_ExtNameTitle=" Partíció neve:"
+_ExtNameBodyUefi="\nA példák közé tartoznak: /home vagy a /var.\n\nEllenőrizd a név előtt a per (/) jelet."  # UEFI Systems
+_ExtNameBodyBios="\nA példák közé tartoznak: /boot vagy a  /home.\n\nEllenőrizd a név előtt a per (/) jelet." # BIOS Systems
+ 
+# Extra Partition Naming Error
+_ExtErrTitle=" Partíció név hiba"
+_ExtErrBody="\nA partíciót nem lehet csatolni. A név csak a per (/) jel után következhet.\n\n"
+ 
+# Install Base
+_InstBseTitle=" Alaprendszer telepítése "
+_InstBseBody="\nA legújabb kernel támogatja az új hardware -ket. Az LTS kernel sokkal stabilabb, és a támogatási ideje is hoszabb.\n\nA base-devel programcsoportra szükség lesz az AUR használatához"
+_InstBaseLK="Legújabb Kernel"
+_InstBaseLKBD="Legújabb Kernel és a base-devel csomag"
+_InstBaseLTS="LTS Kernel"
+_InstBaseLTSBD="LTS Kernel és a  base-devel csomag"
+ 
+# Install Wireless Packages
+_InstWirTitle=" Vezeték nélküli eszköz érzékelve "
+_InstWirBody="\nKiegészítés telepítése a vezeték nélküli csomagokhoz...\n\n"
+ 
+# Install BIOS Bootloader
+_InstBiosBtTitle=" BIOS renszertöltő telepítése "
+_InstBiosBtBody="\nGrub2 ajánlott a kezdőknek. A telepítési eszközt is ki lehet választani..\n\nSyslinux egy könnyebb és egyszerűbb alternatíva, általában Linux telepítő média indítására használt."
+ 
+# Grub Installation
+_InstGrubDevTitle=" Válassz Grub eszközt "
+_InstGrubDevBody="\nGrub telepítése ugyanarra az eszközre/merevlemezre rendszergazdaként"
+_InstGrubDevBody2="\n\nVálaszd az 'igen' -t ha csak egy eszközre telepíted"
+ 
+# Syslinux Installation
+_InstSysTitle=" Syslinux konfiguráció ellenőrzése "
+_InstSysBody="\nKérlek ellenőrizd a syslinux konfigurációs fájlt.\n\nTartalmazza a parancsot:\n"
+ 
+# Install UEFI Bootloader
+_InstUefiBtTitle=" UEFI rendszertöltő telepítése "
+_InstUefiBtBody="\nA rEFInd -nak szükséges /boot/efi mappa felcsatolása. systemd-boot-nak szükséges /boot mappa felcsatolása. Grub2 működik akár.\n\nNOTE: A rEFInd az LVM -et nem támogatja."
 
-# UEFI kiválasztása
-_SelUefiBody="\nVálassz UEFI partíciót. Ez egy speciális partíció az UEFI rendszerek indítása számára."
-
-# UEFI formázása
-_FormUefiBody="AzUEFI partíció"
-_FormUefiBody2="már formázva van.\n\nÚjraformázod? Ezzel az összes adat elveszik a partíción.\n\n"
-
-# UEFI csatolási pont
-_MntUefiBody="\nVálasszUEFI csatolási pontot.\n\n'systemd-boot' megköveteli a  /boot csatosási pontot. A 'grub' más csatolási ponttal is működik."
-
-# Extra partíciók
-_ExtPartBody="\nVálassz a további partíciók közül bármilyen sorrendben, vagy nyomd meg a  'Kész' gombot ha végeztél."
-
-# Extra partíciók
-_ExtPartBody1="\nAdj meg partíció csatolási pontot. Biztosítsd, hogy a név per (/) jellel kezdődjön. Például:\n\n"
-
-# Extra partíció elnevezési hiba
-_ExtErrBody="\nA partíció nem csatolható a csatolási pont nevének hibája miatt.. A nevet per '/' jel után add meg.\n\n"
-
-# Alaptelepítés
-_InstBseTitle="Alaptelepítés"
-_InstBseBody="\nSzabvány: a kezdőknek ajánlott. Válassz két kernelt (linux and linux-lts) és lehetőséged van a 'base-devel' csomagcsoport kiválasztására. A 'sudo, btrfs-progs, f2fs-tools' csomagok is telepítve lesznek.\n\nHaladó: Válassz ki legfeljebb négy kernelt (linux, lts, grsec, zen) és egyedi választással a 'base' és 'base-devel' csomagokat. A  'grsec' és 'zen' kerneleknél további konfigurációra lehet szükség, lehetséges szükséges lesz a 'Virtualbox' és NVIDIA.\n\nMegjegyzés: Ha nincs még telepítve, akkor legalább egy kernelt kell választani"
-_InstStandBseBody="\nA  'base' csomagcsoport automatikusan feltelepül. A 'base-devel'  csomagcsoportnak szükséges az Arch User Repository (AUR) használata.\n\n"
-_InstStandBase="Szabvány telepítés"
-_InstAdvBase="Haladó telepítés"
-_InstAdvBseBody="\nFigyelem: Ez csak tapasztalt felhasználók részére ajánlott. Újabb felhasználók használják a szabvány telepítési módot."
-_InstAdvWait="\nCsomagleírások összegyűjtése"
-
-# BIOS rendszertöltő telepítése
-_InstBiosBtTitle="BIOS rendszertöltő telepítése"
-_InstBiosBtBody="\nA 'Grub2' ajánlott a kezdőknek. A telepítési eszköz is kiválasztható.\n\nA 'Syslinux' könnyebb és egyszerűbb megoldás, de ez csak 'ext' vagy 'btrfs' fájlrendszereknél használható."
-_InstSysTitle="Syslinux telepítése"
-_InstSysBody="\nA 'syslinux' telepítése a Master Boot Recordba (MBR) vagy a Root (/) partícióra?\n\n"
-
-# UEFI rendszertöltő telepítése
-_InstUefiBtTitle="UEFI rendszertöltő telepítése"
-_InstUefiBtBody="\nA 'systemd-boot' megköveteli a  /boot partíciót. A 'grub' más csatolási ponttal is működik."
-_SetBootDefBody="\nNéhány UEFI firmwarét nem érzékel a bootloader, kivéve, ha az az alapbeállítás másolja az 'efi stub'-ot "
-_SetBootDefBody2="és átnevezi ezt a 'bootx64.ef'-neki.\n\nEzt ajánlatos megtenni, kivéve, ha ezt már használja a rendszertöltő, vagy ha több rendszertöltőt használsz.\n\nBeállítod a rendszertöltőt alapértelmezettként?\n\n"
-
-# 'efi' fájl beállítása a 'grub' számára
-_SetDefDoneBody="beállítva alapértelmezett rendszertöltőnek.\n\n"
-
-# Grafikus kártya menü
-_GCtitle="Grafikus kártya menü"
-_GCBody="Válaszd a  'Nouveau'-t  a régebbi NVIDIA kártyákhoz. Ha a kártyád nincs listázva, válaszd az 'Ismeretlen / általános'-t.\n"
+# Set UEFI Grub as default
+_SetGrubDefTitle=" Beállítod a Grub-ot alapértelmezett rendszertöltőnek? "
+_SetGrubDefBody="\nA Grub néhány UEFI firmware-t nem érzékel, ha csak ez az alapértelmezett rendszertöltő, nem bootoló rendszert eredményezhet\n\nSzeretnéd a Grub -ot beállítani alapértelmezett rendszertöltőnek?\n\nJavasoljuk válaszd az  'Igen' -t, főként kezdőknek. Ez bemásolja a bootolható grubx64.efi -t ,"
+_SetGrubDefBody2="amit nevezz át bootx64.efi -nek, ha szükséges.\n\nEgyébként válaszd a  'Nem' -et, különösen akkor, ha már van egy alapértelmezett rendszertöltő, és/vagy ha több rendszertöltőt akarsz használni."
+ 
+# Gummiboot Configuration Check
+_ChkGumTitle=" Gummiboot konfiguráció ellenőrzése  "
+_ChkGumBody="\nKérlek ellenőrizd az Arch és a rendszertöltő konfigurációs fájlait mielőtt bezárnád a folytatáshoz.\n"
+ 
+# Set rEFInd as default
+_SetRefiDefTitle=" Beállítod a rEFInd -ot alapértelmezett renszertöltőnek? "
+_SetRefiDefBody="\nNéhány UEFI firmware -t nem érzékel a rEFInd, ha csak ez az alapértelmezett rendszertöltő, nem bootoló rendszert eredményezhet\n\nSzeretnéd a rEFInd -ot beállítani alapértelmezett rendszertöltőnek?\n\nJavasoljuk válaszd az  'Igen' -t, főként kezdőknek. Ez telepíteni fogja a rEFInd -ot"
+_SetRefiDefBody2="a szükséges bootx64.efi -vel.\n\nEgyébként válaszd a  'Nem' -et, különösen akkor, ha már van egy alapértelmezett rendszertöltő, és/vagy ha több rendszertöltőt akarsz használni."
+ 
+ 
+# efi file set for Grub or Refind
+_SetDefDoneTitle=" UEFI fájlok átmásolva "
+_SetDefDoneBody="alapértelmezett rendszertöltő beállítva.\n\n"
+ 
+# rEFInd Mountpoint error
+_RefiErrTitle=" rEFInd UEFI csatolási pont "
+_RefiErrBody="\nA rEFInd telepítő script nem működik csak ha az UEFI partíció csatolva van a  /boot/efi -be. Kérlek válaszd a Gummiboot -ot (ajánlott) vagy a Grub -ot.\n\n"
+ 
+# ALSA, Xorg, Input
+_AXITitle=" ALSA, Xorg, és Input "
+_AXIBody="\nA grafikus kártya, vagy a munkakörnyezetek telepítése előtt, egyéb csomagok telepítése szükséges :\n\nalsa - Fejlett Linux hangrendszer\nxorg-* - nyílt forráskódú ablakozórendszer rendszer a grafikus megjelenítésért\nxf86-input-* - nyílt forráskódú meghajtó programok a beviteli eszközök számára\n\n"
+ 
+# Graphics Card Menu
+_GCtitle=" Grafikus kártya menü "
+_GCBody="Használd a  Nouveau drivert a régi NVIDIA kártyákhoz. Ha a kártyád nincs a listában, használd az  'ismeretlen / általános' lehetőséget.\n"
 _GCUnknOpt="Ismeretlen / általános"
+ 
+# NVIDIA Configruation Check
+_NvidiaConfTitle=" NVIDIA konfiguráció ellenőrzés "
+_NvidiaConfBody="\nAz alapvető NVIDIA konfigurációs fájl létrehozva. Kérlek ellenőrizd, mielőtt bezárnád a folytatáshoz.\n"
+ 
+# Graphics Card Detection
+_GCDetTitle="Érzékelve"
+_GCDetBody="\nEz a grafikus kártya"
+_GCDetBody2="-Válassz 'Igen' -t a nyílt forráskódú driver telepítéséhez.\n\n-Válassz 'Nem' -et a grafikus kártya menü megnyitásához, amely magában foglalja a zárt NVIDIA meghajtóprogramokat."
 
-# NVIDIA konfiguráció ellenőrzése
-_NvidiaConfTitle="NVIDIA konfiguráció ellenőrzése"
-_NvidiaConfBody="\nEgy alap NVIDIA konfiguráció jött létre. Kérlek ellenőrizd a bezárás előtt a folytatáshoz.\n"
-
-# Grafikus kártya detektálása
-_GCDetTitle="detektálva"
-_GCDetBody="\nEz a grafikus kártya, vagy virtualizációs szoftver"
-_GCDetBody2="-Válaszd az 'Igen'-t a nyílt forrású meghajtóprogram telepítéséhez.\n\n-Válaszd a 'Nem'-et, hogy megnyisd a grafikus kártya menüt, amely tartalmazza a szabadalmazott NVIDIA meghajtóprogramot."
-
-# Info az asztali környezetek telepítéséhez
-_DEInfoBody="\nTöbb környezetben is telepíthető.\n\nGnome és LXDE tartalmazza a bejelentkezéskezelőt.\n\nCinnamon, Gnome és a KDE tartalmazza a hálózatkezelőt.\n\n"
-
-# Asztali környezetek telepítése menü
-_InstDETitle="Asztali környezetek telepítése "
-_InstDEBody="Az asztali környezetek, és a hozzájuk tartozó programcsoportok lesznek listázva először."
-
-# Közös csomagok telepítése
-_InstComTitle="Közös csomagok telepítése"
-_InstComBody="Egyes asztali környezetek megkövetelik a további csomagokat a jobb működés érdekében."
-
-# Bejelentkezéskezelő
-_DmChTitle="Bejelentkezéskezelő telepítése"
-_DmChBody="a 'gdm' felsorolja a 'gnome-shell'-t , mint egy függőség. Az 'sddm' az alaértelmezett a plazma felülethez .A 'lightdm' tartalmazni fogja a 'lightdm-gtk-greeter'-t.A 'slim' az nem hosszú távon támogatott."
-_DmDoneBody="\nA bejelentkezéskezelő telepítve és bekapcsolva.\n\n"
-
-# Hálózatkezelő
-_InstNMTitle="Hálózatkezelő telepítése"
-_InstNMBody="\nA 'Network Manager' az ajánlott, különösen a vezetéknélküli és PPPoE/DSL kapcsolatokhoz.\n"
-_InstNMErrBody="\nHálózatkezelő alkalmazás telepítve és bekapcsolva.\n\n"
-
-# Üdvözöllek
-_WelTitle="Üdvözöllek az"
-_WelBody="\nEz a telepítő letölti a legújabb csomagokat az ARCH tárolókból. Csak minimálisan szükséges beállítás vállalt.\n\nMENÜ OPCIÓK: Válassz az opciók számának  beütésével, vagy használd a fel/le nyilakat mielőtt [enter]t nyomnál a kiválasztáshoz. A gombok közötti váltáshoz használd a [Tab] billentyűt  vagy használd a bal/jobb nyilakat mielőtt [enter]t nyomnál a megerősítéshez. A hosszú listában navigálhatsz a [pg up] és [pg down] billentyűkkel, és/vagy nyomd le az első betűjét a kiválasztani kívánt opciónak.\n\nKonfiguráció és csomag opciók: Az alapértelmezett csomagok a csekklistán elleőrizve lesznek. Használd a [szóköz] billentyűt a kiválasztásoz illetve a kiválasztás törléséhez."
-
-# Előkészületek menü
-_PrepMenuTitle="Telepítés előkészítése"
-_PrepMenuBody="\nA konzol billentyűzetkiosztást használja mind a telepítő, mind a telepített rendszer.\n"
+#  Install DE Info
+_DEInfoTitle=" Munkakörnyezetek telepítése "
+_DEInfoBody="\nEz a lehetőség megismételhető több munkakörnyezet telepítésére.\n\nGnome, KDE (full), és az LXDE  tartalmazza a bejelentkezés kezelőt.\n\nA Cinnamon, Gnome és a KDE tartalmazza a hálózatkezelőt.\n\n"
+ 
+# Install DE Menu
+_InstDETitle=" Munkakörnyezetek telepítése  "
+_InstDEBody="\nA munkakörnyezetek vannak listázva elöl, több telepítési lehetőséged is van."
+ 
+# Install Common Packages
+_InstComTitle=" Telepít közös csomagokat? "
+_InstComBody="\nEgyes aztali környezetekben közösek lehetnek a telepítendő csomagok, különösen a jogosultságok, a home mappa létrehozása, és a fájlkezelési funkcionalitás.\n\nCsomag tartalma: xterm, xdg-user-dirs, gksu, gnome-keyring, polkit, gvfs, és a gnome-icon-theme, stb. Ezeket egyedül a teljes KDE telepítésnél nem kell telepíteni\n\nTelepíted ezeket a csomagokat? Ez az opció csak most lehetséges a telepítés folyamán.\n\n"
+ 
+# KDM
+_DmKdeTitle=" KDM bekapcsolása "
+_DmKdeBody="\nMivel a KDE telepítve lett, a hozzá tartozó bejelentkezéskezelő a -KDM- be lett kapcsolva.\n\n"
+ 
+# GDM
+_DmGdmTitle=" GDM bekapcsolása "
+_DmGdmBody="\nMivel a  Gnome telepítve lett,  a hozzá tartozó bejelentkezéskezelő a -GDM- be lett kapcsolva..\n\n"
+ 
+# KDM and GDM Installed
+_DmChTitle=" Válassz GDM vagy KDM "
+_DmChBody="\nGnome és KDE telepítve. Kérlek válassz hozzá bejelentkezéskezelőt.\n\n"
+ 
+# KDM or GDM Choice Made
+_DmDoneTitle="Bekapcsolás "
+_DMDoneBody="bekapcsolva.\n\n"
+ 
+# LXDM
+_DmLxdmTitle=" LXDM bekapcsolás "
+_DmLxdmBody="\nMivel az LXDE telepítve lett, a hozzá tartozó bejelentkezéskezelő az -LXDM- be lett kapcsolva.\n\n"
+ 
+# LXDM or LightDM
+_DmChoiceTitle=" Válassz bejelentkezéskezelőt "
+_DmChoiceBody="\nKérlek válassz LXDM vagy LightDM közül. LXDM az ajánlott a kezdőknek.\n"
+ 
+# DM Already Installed
+_DmInstTitle=" Bejelentkezéskezelő telepítése "
+_DmInstBody="\nBejelentkezéskezelő telepítve és bekapcsolva.\n\n"
+ 
+# Network Manager
+_InstNMTitle=" Válassz hálózatkezelő alkalmazást "
+_InstNMBody="\nA Network Manager az ajánlott, különösen a vezeték nélküli és a PPPoE/DSL csatlakozásokhoz.\n"
+ 
+# Network Manager Installed
+_InstNMDoneTitle=" Hálózatkezelő telepítése "
+_InstNMDoneBody="\nA hálózatkezelő telepítve és bekapcsolva."
+ 
+# Network Manager Already Installed (no need for seperate title)
+_InstNMErrBody="\nA hálózatkezelő telepítve és bekapcsolva."
+ 
+# Welcome
+_WelTitle=" Isten hozott "
+_WelBody="\nEz a telepítő letölti a legújabb csomagokat az Arch tárolókból. Az alap 'Vanília' telepítés, így csak minimális beállítást kell elvégezned.\n\nFontos: navigálni a számok leütésével, vagy a fel/le nyilak használatával tudsz, megerősítéshezz használd az [enter] billentyűt.\n\nA gombok közötti váltáshoz használd a [Tab] vagy a bal/jobb nyilakat, mielőtt  [enter]-t ütnél a megerősítéshez.\n"﻿
+ 
+# Preparation Menu
+_PrepTitle=" Telepítés előkészítése "
+_PrepBody="\nAz asztali billentyűzetkiosztást fogja használni a telepítő - ahol munkakörnyezet is települ - és a telepített rendszer is.\n"
 _PrepKBLayout="Asztali billentyűzetkiosztás beállítása"
-_PrepMirror="Telepítő tükörlista beállítása"
-_PrepPartDisk="Lemez partícionálás"
-_PrepMntPart="Partíciók csatolása"
+_PrepMirror="Telepítő tükörszerver lista beállítása (választható)"
+_PrepPartDisk="Lemezek particionálása"
+_PrepMntPart="Partíció csatolás"
 _Back="Vissza"
-
-# Alaptelepítés menü
-_InstBsMenuTitle="Alaptelepítés"
-_InstBseMenuBody="\nA telepítendő csomagokat le kell tölteni a tükörszerverekről. A 'pacstrap' script telepíti az alaprendszert. Csomagkészítéshez az AUR-ból, vagy az ABS segítségével a 'base-devel' csomag telepítése szükséges."
-_InstBse="Alapcsomagok telepítése"
+ 
+# Install Base Menu
+_InstBsMenuTitle=" Alaprendszer telepítése "
+_InstBseMenuBody="\nNem szükséges telepíteni a renszerbetöltőt, ott ahol egy meglévő Linux Disztribúció mellé telepítettünk, ami Grub -ot használ; ehelyett csak frissítsd a Grub -ot."
+_InstBse="Alaprenszer telepítése"
 _InstBootldr="Rendszertöltő telepítése"
-
-# Alapbeállítás menü
-_ConfBseMenuTitle="Alaptelepítés beállítása"
-_ConfBseBody="\nAlaptelepítés bázis beállítása."
-_ConfBseFstab="FSTAB generálása"
-_ConfBseHost="Gazdagépnév beállítása"
-_ConfBseTimeHC="Időzóna és óra beállítása"
-_ConfBseSysLoc="Rendszer tartózkodási hely beállítása"
-_MMRunMkinit="Mkinitcpio futtatása"
-
-# Felhasználó menü
-_ConfUsrRoot="Rendszergazda jelszó beállítása"
-_ConfUsrNew="Új felhasználó(k) hozzáadása"
-
-# Grafikus menü
-_InstGrMenuTitle="Grafikus felület telepítése"
-_InstGrMenuBody="\nAz asztali környezet telepítését megelőzően, hang, bemeneti, és grafikus meghajtókat kell először feltelepíteni."
-_InstGrMenuDS="X szerver telepítése"
-_InstGrMenuDSBody="A 'xorg' és 'wayland' lehetőségek mellett , a beviteli eszközök illesztőprogramjai (xf86-input-) is szerepelnek a listán."
-_InstGrMenuDD="Megjelenítő meghajtóprogramok  telepítése"
-_InstGrMenuGE="Grafikus környezetek telepítése"
-_InstGrMenuDM="Bejelentkezéskezelő telepítése"
-
-# Hálózatok Menü
-_InstNMMenuTitle="Hálózati képességek telepítése"
-_InstNMMenuBody="\nKiegészítő csomagok lehetnek szükségesek a hálózati és vezeték nélküli eszközök számára. Bizonyos vezeték nélküli eszközök is további meghajtóprogramokat igényelhetnek.\n\n"
-_InstNMMenuPkg="Vezeték nélküli eszközcsomagok telepítése"
-_InstNMMenuNM="Hálózatkezelő alkalmazás telepítése"
-_InstNMMenuCups=" CUPS / nyomtató csomagok telepítése"
-_InstNMMenuPkgBody="A wifi csomagok ellenőrizve lesznek, ha vezeték nélküli eszköz elérhető. Ha bizonytalan a vezeték nélküli eszköz típusában, akkor az összes csomag is telepíthető."
-_SeeWirelessDev="Vezeték nélküli eszközök megjelenítése (választható)"
-_WirelessShowTitle="Vezeték nélküli eszközök"
-_WirelessErrBody="\nNem észlelhető.\n"
-_InstCupsBody="A CUPS (Common Unix Printing System) egy Apple Inc. által kifejlesztett szabványokon alapuló nyílt forráskódú nyomtatási rendszer az OS X és más UNIX rendszerű operációs rendszerekre. A 'SAMBA' lehetővé teszi a nyomtató megosztást a LINUX és a Windows rendszerek között."
-_InstCupsQ="\nBekapcsolja az  'org.cups.cupsd.service' -t a telepített rendszeren?\n\n"
-
-# Multimédia támogatás telepítése menü
-_InstMultMenuTitle="Multimédia támogatás telepítése"
-_InstMultMenuBody="\nA kisegítő csomagok segítség a látás és hallássérülteknek. Az egyéni csomagok opció lehetővé teszi a felhasználó által meghatározott csomagok telepítését.\n"
-_InstMulSnd="Hang illesztőprogramok telepítése"
-_InstMulSndBody="\nAz ALSA kernel által meghajtott hangkártya illesztőprogramokat bizosít. PulseAudio az ALSA proxy-jaként szolgál"
-_InstMulCodec="Kodekek telepítése"
-_InstMulAcc="Kisegítő csomagok telepítése"
-_InstMulAccBody="\nVálassza ki a kívánt kisegítő csomagokat\n\n"
-_InstMulCust="Egyéni csomagok telepítése"
-
-# Kodek menü
-_InstMulCodBody="A 'gStreamer' egy csővezeték-alapú multimédiás keretrendszer. Az első két lehetőség a jelenlegi, és a korábbi  (gstreamer0.10) csomag csoportok. A 'xine' is a listán szerepel.\n\n"
-
-# Egyéni csomagok doboza
-_InstMulCustBody="\nSzóközzel elválasztva adja meg az Arch tárolókból telepítendő csomagok nevét. Nem szükséges beírni a 'pacstrap'-ot, vagy egyéb parancsot. Csak a csomag nevét adjad meg helyesen. Például a Firefox, VLC, Htop telepítéséhez: firefox vlc htop\n"
-
-# Főmenü
-_MMTitle="Főmenü"
-_MMBody="\nMinden szükséges lépést követned kell a telepítés érdekében. Miután elkészültél, válaszd a 'Kész' gombot a telepítés befejezéséhez.\n"
-
-# Telepítő bezárása
+ 
+# Configure Base Menu
+_ConfBseTitle=" Alaprendszer beállítása"
+_ConfBseBody="\nAlap beállítás szükséges. Ide tartoznak a  hálózat, idő, nyelv, és a billentyűzet alapértékei a telepített rendszeren."
+_ConfBseFstab=" FSTAB generálása"
+_ConfBseHost="Hosztnév beállítása"
+_ConfBseTime="Időzóna beállítása"
+_ConfBseHWC="Hardveres óra beállítása"
+_ConfBseSysLoc="Tartózkodási hely beállítása"
+_ConfBseVirtCon="Virtuális konzol beállítása"
+ 
+# User Menu
+_ConfUsrTitle=" Felhasználók beállítása"
+_ConfUsrBody="\nA Root az alapértelmezett 'szuper-felhasználó' vagy 'adminisztrátor' fiók. Ugyanaz a jelszó is beállítható Root és más személyes felhasználó fiókjához, de ez egyező jelszó használata biztonsági okokból nem javasolt."
+_ConfUsrRoot="Root jelszó beállítása"
+_ConfUsrNew="Felhasználók hozzáadása"
+ 
+# Desktop Menu
+_InstDEMenuTitle=" Munkakörnyezet telepítése "
+_InstDEMenuBody="\nA munkakörnyezet telepítése előtt a, grafikus, beviteli, és a hang illesztőprogramokat kell először telepíteni. Ide tartozik a grafikus kártya illesztőprogramjának telepítése is."
+_InstDEMenuGISD="Grafikus, beviteli, és hang illesztőprogramok telepítése"
+_InstDEMenuDE="Munkakörnyezet(ek) telepítése"
+_InstDEMenuNM="Hálózat kezelő alakalmazás telepítése"
+_InstDEMenuDM="Megjelenítőkezelő / bejelentkezéskezelő telepítése"
+ 
+# Main Menu
+_MMTitle=" Főmenü "
+_MMBody="\nA telepítő végigvezet a szükséges lépéseken. Miután elkészültél, válaszd a 'Kész' opciót a telepítés befejezéséhez.\n"
+_MMPrep="Telepítés előkészítése"
+_MMInstBse="Alaprendszer telepítése"
+_MMConfBse="Alaprendszer beállítása"
+_MMConfUsr="Felhasználói fiókok beállítása"
+_MMInstDE="Munkakörnyezet telepítése"
+_MMRunMkinit="Korai indítási környezet generálása"
+_Done="Kész"
+ 
+# Close Installer
 _CloseInstBody="Bezárod a telepítőt?"
