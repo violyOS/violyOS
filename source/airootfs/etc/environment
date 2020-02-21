@@ -3,8 +3,4 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-SHELL=/bin/bash
-
-BROWSER=google-chrome
-
-EDITOR=leafpad
+QT_QPA_PLATFORMTHEME=qt5ct
