@@ -11,7 +11,7 @@
 6. Licensing and Copyright
 7. Frequently Asked Questions [FAQ]
 
-[<img src="https://raw.githubusercontent.com/violyOS/violyOS/master/a32fbf6e-c448-11e6-8f19-bcd21b5e2f26.png">](https://violy-os.zulipchat.com/join/y303v061e73nvpt3re09olv5/)
+[<img src="https://raw.githubusercontent.com/violyOS/violyOS/master/zulip.png">](https://violy-os.zulipchat.com/join/y303v061e73nvpt3re09olv5/)
 
 
 ## What is violyOS ?
